@@ -40,10 +40,15 @@
             background-color: #6b0;
         }
         
+        .boxParent {
+            color: #808080;
+        }
+        
         .box {
             height: 100px;
             width: 100px;
             color: #446d88;
+            background-color: #6b0;
             border: 10px solid currentColor;
             border-left: 1px solid;
         }
@@ -82,7 +87,9 @@
     <button class="btn">Yes!</button>
     <button class="btn cancel">取消</button>
     <button class="btn ok">确认</button>
-    <div class="box">测试文字颜色</div>
+    <div class="boxParent">
+        <div class="box">测试文字颜色</div>
+    </div>
     <a href="">链接</a>
     <div class="callout">
         <input type="text" value="测试文字" />
