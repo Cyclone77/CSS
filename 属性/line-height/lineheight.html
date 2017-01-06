@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        /*
+        * 该属性的应用值是这个无单位数字<number>乘以该元素的字体大小。
+        * 通俗的讲就是字体大小的倍数
+        */
+        
+        .green {
+            line-height: 2;
+            font-size: 80%;
+            border: solid limegreen;
+        }
+        
+        .red {
+            line-height: 32px;
+            font-size: 12px;
+            border: solid red;
+        }
+        
+        .box {
+            display: inline-block;
+            margin: 0;
+            float: left;
+        }
+    </style>
+</head>
+
+<body>
+    <!--推荐使用无单位数值给line-height赋值-->
+    <p class="box green">
+        length and percentage line-heights have poor inheritance behavior ...
+    </p>
+    <p class="box red">
+        length and percentage line-heights have poor inheritance behavior ...
+    </p>
+
+</body>
+
+</html>

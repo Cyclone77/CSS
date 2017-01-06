@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Button Style</title>
+    <style>
+        body {
+            font-size: 100%;
+        }
+        
+        button {
+            padding: 6px 16px;
+            border: 1px solid #446d88;
+            background: #58a linear-gradient(hsla(0, 0%, 100%, .2), transparent);
+            border-radius: 4px;
+            box-shadow: 0 1px 5px gray;
+            color: white;
+            text-shadow: 0 -1px 1px #335166;
+            font-size: 20px;
+            line-height: 30px
+        }
+        
+        .btn {
+            font-size: 2em;
+            line-height: 1.5;
+            padding: 0.3em 0.8em;
+            border-radius: .2em;
+            box-shadow: 0 .05em .25em gray;
+            text-shadow: 0 -.05em .05em #335166;
+            outline: none;
+            cursor: pointer;
+        }
+        
+        button.cancel {
+            background-color: #c00;
+        }
+        
+        button.ok {
+            background-color: #6b0;
+        }
+        
+        .box {
+            height: 100px;
+            width: 100px;
+            color: #446d88;
+            border: 10px solid currentColor;
+            border-left: 1px solid;
+        }
+        
+        a {
+            color: inherit;
+        }
+        
+        .callout {
+            position: relative;
+        }
+        
+        .callout::before {
+            content: "一些文字提示";
+            position: absolute;
+            top: -.4em;
+            left: 1em;
+            padding: .35em;
+            background: inherit;
+            border: inherit;
+            border-right: 0;
+            border-bottom: 0;
+            transform: rotate(45deg);
+        }
+        
+        .bacgr {
+            height: 100px;
+            width: 300px;
+            border: solid;
+            background: url(https://mdn.mozillademos.org/files/11983/starsolid.gif) no-repeat top right / 4em 4em, url(https://mdn.mozillademos.org/files/11983/starsolid.gif) no-repeat bottom / 2em 2em, url(https://mdn.mozillademos.org/files/11983/starsolid.gif) no-repeat bottom left / 2em 2em;
+        }
+    </style>
+</head>
+
+<body>
+    <button class="btn">Yes!</button>
+    <button class="btn cancel">取消</button>
+    <button class="btn ok">确认</button>
+    <div class="box">测试文字颜色</div>
+    <a href="">链接</a>
+    <div class="callout">
+        <input type="text" value="测试文字" />
+    </div>
+    <div class="bacgr"></div>
+</body>
+
+</html>

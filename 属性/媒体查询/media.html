@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" href="media.css">
+</head>
+
+<body>
+    <section class="main">
+
+    </section>
+    <div class="list"></div>
+    <div class="list"></div>
+    <div class="list"></div>
+    <script>
+        var list = document.body.querySelector(".list");
+        var listArr = document.body.querySelectorAll(".list");
+        console.dir(list);
+        console.dir(listArr);
+        function $$(selector, context) {
+            context = context || document;
+            var elements = context.querySelectorAll(selector);
+            return Array.prototype.slice.call(elements);
+        }
+
+        console.dir($$(".list"));
+        var root = document.documentElement;
+        var dummy = document.createElement('p');
+        dummy.style.backgroundImage = 'linear-gradient(red,tan)';
+        if (dummy.style.backgroundImage) {
+            root.classList.add('lineargradients');
+        }
+        else {
+            root.classList.add('no-lineargradients');
+        }
+    </script>
+</body>
+
+</html>
