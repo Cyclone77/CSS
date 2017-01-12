@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        div {
+            /*
+                增加回退方案
+                在不支持 background-position 扩展语法的浏览器中， 背景图片会紧贴在左上角（ 背景图片的默认位置）
+                提供一个回退方案也很简单， 就是把老套的bottom right 定位值写进 background 的简写属性中
+            */
+            background: url(code-pirate.svg) no-repeat bottom right #58a;
+            background-position: right 20px bottom 10px;
+            /* Styling */
+            max-width: 10em;
+            min-height: 5em;
+            padding: 10px;
+            color: white;
+            font: 100%/1 sans-serif;
+        }
+    </style>
+</head>
+
+<body>
+    <div></div>
+</body>
+
+</html>
