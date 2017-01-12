@@ -2,7 +2,7 @@
 
 ### RGBA/HSLA 颜色
 
-[知识点](../../color[rgba-hsla])
+[知识点](../../../color[rgba-hsla])
 
 > 默认情况下，背景会延伸到边框所在的区域下层。
 
