@@ -38,6 +38,8 @@ outline: 1px solid white;
 
 #### outline-offset
 
-outline-offset是以border边界作为参考点的，从0开始，正值从border边界往外延，负值从border边界往里缩。
+- outline-offset是以border边界作为参考点的，从0开始，正值从border边界往外延，负值从border边界往里缩；    
+- outline的边框画在border的外面；
+- outlines相关属性不占据布局空间，不会影响元素的尺寸；
 
 > outline边框不会根据border-radius的圆角产生圆角。这被w3c工作组视为BUG后期可能会处理。
