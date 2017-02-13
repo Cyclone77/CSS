@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>清除浮动</title>
+    <style media="screen">
+        .nostyle {
+            padding: 10px 0 10px 10px;
+            background-color: #ccc;
+            border: 1px solid #bbb;
+        }
+
+        .demo2 {
+            overflow: auto;
+        }
+
+        .demo3 {
+            display: inline-block;
+        }
+
+        li {
+            list-style: none;
+            float: left;
+            margin-right: 10px;
+        }
+
+        .clearfix:before,
+        .clearfix:after {
+            content: " ";
+            display: table;
+        }
+
+        .clearfix:after {
+            clear: both;
+        }
+    </style>
+</head>
+
+<body>
+    <ul class="nostyle demo clearfix">
+        <li><img alt="img1" src="img150.jpg"></li>
+        <li><img alt="img2" src="img150.jpg"></li>
+        <li><img alt="img3" src="img150.jpg"></li>
+    </ul>
+    <ul class="nostyle demo2">
+        <li><img alt="img1" src="img150.jpg"></li>
+        <li><img alt="img2" src="img150.jpg"></li>
+        <li><img alt="img3" src="img150.jpg"></li>
+    </ul>
+    <ul class="nostyle demo3">
+        <li><img alt="img1" src="img150.jpg"></li>
+        <li><img alt="img2" src="img150.jpg"></li>
+        <li><img alt="img3" src="img150.jpg"></li>
+    </ul>
+</body>
+
+</html>
