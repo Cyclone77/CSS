@@ -1,0 +1,40 @@
+@charset "UTF-8";
+//默认属性
+$bgColor: #FFFFFF;
+$color: #333;
+$fontFamily: "Open Sans",Helvetica,Arial,sans-serif;
+//全局设置
+html {
+    margin: 0;
+    @at-root body {
+        margin: 0;
+        color: $color;
+        font-size: 16px;
+        line-height: 24px;
+        font-family: $fontFamily;
+    }
+}
+
+.top-header{
+    background-color: $bgColor;
+    position: relative;
+    z-index: 1;
+    padding: 43px 0 40px;
+    padding: 2.7rem 0 2.5rem;
+    text-align: center;
+}
+
+.master-header {
+    position: relative;
+    z-index: 1;
+    background-color: #353a4a;
+    background-image:url(1.png);
+    background-repeat: no-repeat;
+    background-position: right center;
+    background-attachment: fixed;
+    background-size: cover;
+    padding: 5rem 0;
+}
+.master-content{
+    height: 500px;
+}
