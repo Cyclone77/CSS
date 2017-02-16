@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        body {
+            font-family: "Consolas", "Courier New", "Courier", "FreeMono", monospace;
+        }
+
+        .button {
+            color: #666;
+            background-color: #EEE;
+            border-color: #EEE;
+            font-weight: 300;
+            font-size: 16px;
+            font-family: "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+            text-decoration: none;
+            text-align: center;
+            line-height: 40px;
+            height: 40px;
+            padding: 0 40px;
+            margin: 0;
+            display: inline-block;
+            appearance: none;
+            cursor: pointer;
+            border: none;
+            -webkit-box-sizing: border-box;
+            -moz-box-sizing: border-box;
+            box-sizing: border-box;
+            -webkit-transition-property: all;
+            transition-property: all;
+            -webkit-transition-duration: .3s;
+            transition-duration: .3s;
+        }
+
+        .button-3d {
+            position: relative;
+            top: 0;
+            -webkit-box-shadow: 0 7px 0 #bbbbbb, 0 8px 3px rgba(0, 0, 0, 0.2);
+            box-shadow: 0 7px 0 #bbbbbb, 0 8px 3px rgba(0, 0, 0, 0.2);
+        }
+
+        .button-3d.button-primary:active,
+        .button-3d.button-primary.active,
+        .button-3d.button-primary.is-active {
+            -webkit-box-shadow: 0 2px 0 #0662a6, 0 3px 3px rgba(0, 0, 0, 0.2);
+            box-shadow: 0 2px 0 #0662a6, 0 3px 3px rgba(0, 0, 0, 0.2);
+        }
+
+        .button-3d.button-primary {
+            -webkit-box-shadow: 0 7px 0 #0880d7, 0 8px 3px rgba(0, 0, 0, 0.3);
+            box-shadow: 0 7px 0 #0880d7, 0 8px 3px rgba(0, 0, 0, 0.3);
+        }
+
+        .button-3d:active,
+        .button-3d.active,
+        .button-3d.is-active {
+            top: 5px;
+            -webkit-transition-property: all;
+            transition-property: all;
+            -webkit-transition-duration: .15s;
+            transition-duration: .15s;
+            -webkit-box-shadow: 0 2px 0 #bbbbbb, 0 3px 3px rgba(0, 0, 0, 0.2);
+            box-shadow: 0 2px 0 #bbbbbb, 0 3px 3px rgba(0, 0, 0, 0.2);
+        }
+
+        .button:active,
+        .button.active,
+        .button.is-active {
+            text-shadow: 0 1px 0 rgba(255, 255, 255, 0.3);
+            text-decoration: none;
+            background-color: #eeeeee;
+            border-color: #cfcfcf;
+            color: #d4d4d4;
+            -webkit-transition-duration: 0s;
+            transition-duration: 0s;
+            -webkit-box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.2);
+            box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.2);
+        }
+    </style>
+</head>
+
+<body>
+    <a href="#" class="button button-3d button-primary">Check out the new site!</a>
+    <pre>
+        <code class="scss ">
+            @import "compass/reset";
+
+            // variables
+            $colorGreen: #008000;
+            $colorGreenDark: darken($colorGreen, 10);
+
+            @mixin container {
+                max-width: 980px;
+            }
+
+            // mixins with parameters
+            @mixin button($color:green) {
+                @if ($color == green) {
+                    background-color: #008000;
+                }
+                @else if ($color == red) {
+                    background-color: #B22222;
+                }
+            }
+
+            button {
+                @include button(red);
+            }
+
+            div,
+            .navbar,
+            #header,
+            input[type="input"] {
+                font-family: "Helvetica Neue", Arial, sans-serif;
+                width: auto;
+                margin: 0 auto;
+                display: block;
+            }
+
+            .row-12 > [class*="spans"] {
+                border-left: 1px solid #B5C583;
+            }
+
+            // nested definitions
+            ul {
+                width: 100%;
+                padding: {
+                    left: 5px; right: 5px;
+                }
+              li {
+                  float: left; margin-right: 10px;
+                  .home {
+                      background: url('http://placehold.it/20') scroll no-repeat 0 0;
+                }
+              }
+            }
+        </code>
+
+    </pre>
+    <link href="https://apps.bdimg.com/libs/highlight.js/9.1.0/styles/railscasts.min.css" rel="stylesheet">
+    <script src="http://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
+    <script src="http://apps.bdimg.com/libs/highlight.js/9.1.0/highlight.min.js"></script>
+    <script>
+        hljs.initHighlightingOnLoad();
+    </script>
+    <script type="text/javascript">
+        $(document).ready(function() {
+            $('pre code').each(function(i, block) {
+                hljs.highlightBlock(block);
+            });
+        });
+    </script>
+</body>
+
+</html>
