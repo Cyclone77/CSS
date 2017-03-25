@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        body {
+            counter-reset: section;
+            /* 重置计数器成0 */
+        }
+
+        h3:before {
+            counter-increment: section;
+            /* 增加计数器值 */
+            content: "项目 " counter(section) ": ";
+            /* 显示计数器 */
+            color: ThreeDShadow
+        }
+    </style>
+</head>
+
+<body>
+    <h3>Introduction</h3>
+    <h3>Body</h3>
+    <h3>Conclusion</h3>
+</body>
+
+</html>
