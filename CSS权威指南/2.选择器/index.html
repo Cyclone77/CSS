@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>选择器</title>
+    <style>
+        html {
+            color: black;
+        }
+
+        h1 {
+            color: gray;
+        }
+
+        h2 {
+            color: silver;
+        }
+
+        .urgent {
+            font-weight: normal;
+        }
+
+        .warning {
+            font-weight: bold;
+        }
+
+        #first-para {
+            font-weight: bold;
+            color: blue;
+        }
+
+        p[fontColor] {
+            color: green;
+        }
+        p[fontColor~='size']{
+            font-size: 18px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>选择器</h1>
+    <h2>元素选择器</h2>
+
+    <h2>类选择器和ID选择器</h2>
+    <p class="urgent warning">类选择器：
+        <span>css样式相同的属性，后面的样式会覆盖前面的样式,</span>
+        <span>和class的前后顺序没有影响</span>
+    </p>
+
+    <p id="first-para">ID选择器：
+        <span>虽然文档中id只能出现一次，实际浏览器解析的时候所有ID的元素都会引用样式</span>
+    </p>
+
+    <h2>属性选择器</h2>
+    <p fontColor="">class和ID是文档元素的特殊属性，也可以用属性选择器 h1[id/class]的方式</p>
+
+    <h2>部分属性选择器</h2>
+    <p fontColor="blue size big">~是部分选择器的关键</p>
+</body>
+
+</html>
