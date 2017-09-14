@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        .box {
+            background: #3498db;
+            color: #fff;
+            margin: 10px;
+        }
+        
+        .inheritance_demo {
+            padding: 1.5em;
+        }
+        
+        .wrapper {
+            font-size: 1.25em;
+        }
+        
+        .wrapper .inheritance_demo {
+            font-size: 1.2em;
+            padding: 1.5em;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="inheritance_demo box">
+        Inheritance with em units demo
+    </div>
+    <div class="wrapper">
+        <div class="inheritance_demo box">
+            Inheritance with em units demo
+            <span>body默认的字体是16px</span><span>  padding:16*1.25*1.2*1.5px</span>
+        </div>
+    </div>
+</body>
+
+</html>
