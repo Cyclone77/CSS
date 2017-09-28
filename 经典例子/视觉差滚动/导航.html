@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+
+    <style>
+        html,
+        body {
+            margin: 0;
+            padding: 0;
+        }
+        
+        .nav-bar {
+            background-color: rgba(202, 175, 175, 0.07);
+            position: fixed;
+            width: 100%;
+        }
+        
+        .nav-bar .logo {
+            float: left;
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+        
+        .nav-bar .logo a {
+            display: inline-block;
+            cursor: pointer;
+            margin: 0 50px;
+        }
+        
+        .nav-bar img {
+            transition: max-height .5s ease;
+            -moz-transition: max-height .5s ease;
+            -webkit-transition: max-height .5s ease;
+            -o-transition: max-height .5s ease;
+        }
+        
+        .nav-bar .logo a img {
+            max-height: 50px;
+        }
+        
+        .nav-bar.scroll-nav .logo a img {
+            max-height: 40px;
+        }
+        
+        .nav-bar.scroll-nav {
+            background-color: #241313;
+            transition: background-color 1.5s ease;
+            -moz-transition: background-color 1.5s ease;
+            -webkit-transition: background-color 1.5s ease;
+            -o-transition: background-color 1.5s ease;
+        }
+        
+        .nav-bar .nav-list {
+            float: right;
+        }
+        
+        .nav-list .list {
+            float: left;
+            padding: 2rem 1rem;
+            transition: padding .5s ease;
+            -moz-transition: padding .5s ease;
+            -webkit-transition: padding .5s ease;
+            -o-transition: padding .5s ease;
+        }
+        
+        .nav-bar.scroll-nav .list {
+            float: left;
+            padding: 1.5rem 1rem;
+        }
+        
+        .nav-list .list:hover {
+            background: hsla(0, 0%, 100%, .4);
+        }
+        
+        .nav-list .list:hover a {
+            color: #000;
+        }
+        
+        .nav-list a.menu {
+            color: #fff;
+            text-decoration: none;
+        }
+        
+        .article {
+            width: 100%;
+            margin: 0 auto;
+            min-height: 100vh;
+            padding: 80px;
+            font: 18px/1.5 'Microsoft YaHei';
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-position: center center;
+            background-size: cover;
+            box-sizing: border-box;
+            overflow: hidden;
+        }
+        
+        .section1 {
+            background-image: url(section01.jpg);
+        }
+        
+        .section2 {
+            background-image: url(section00.jpg);
+        }
+        
+        .clearfix::after {
+            content: "";
+            display: table;
+            clear: both;
+            overflow: hidden;
+        }
+        
+        .content {
+            text-align: center;
+            margin-top: 200px;
+            color: #fff;
+        }
+    </style>
+</head>
+
+<body>
+    <header class="header">
+        <nav class="nav-bar">
+            <div class="logo">
+                <a href="#" class="">
+                    <img src="Google logo.png" alt="">
+                </a>
+            </div>
+            <div class="nav-list">
+                <div class="list"><a href="#" class="menu">首页</a></div>
+                <div class="list"><a href="#" class="menu">主要产品</a></div>
+                <div class="list"><a href="#" class="menu">反馈错误</a></div>
+                <div class="list"><a href="#" class="menu">联系我们</a></div>
+            </div>
+        </nav>
+    </header>
+    <section name="" class="article section1" id="selecttitle">
+        <div class="content">
+            <h1>这里是大标题，公司名称</h1>
+        </div>
+    </section>
+    <section name="" class="article section2">
+        <div class="content">
+            <h1>这里是产品展示</h1>
+        </div>
+    </section>
+
+    <script>
+        var nav = document.querySelector('.header .nav-bar');
+
+        window.addEventListener('scroll', function(event) {
+            var scrollTop = document.documentElement.scrollTop || document.body.scrollTop;
+            if (scrollTop > 80) {
+                nav.classList.add('scroll-nav');
+            } else {
+                nav.classList.remove('scroll-nav');
+            }
+        })
+    </script>
+</body>
+
+</html>
