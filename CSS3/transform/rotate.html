@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>rotate</title>
+    <style>
+        p {
+            margin: 0;
+        }
+        
+        .continue {
+            margin: 100px;
+            border: 1px solid #808080;
+        }
+        
+        .trform {
+            background-color: rgb(187, 174, 174);
+            height: 100px;
+            width: 100px;
+        }
+        
+        .rotate {
+            transform: rotate(30deg);
+        }
+        
+        .translate {
+            transform: translate(100px, 20px);
+        }
+        
+        .translatex {
+            transform: translateX(200px);
+        }
+        
+        .translatey {
+            transform: translateY(50px);
+        }
+        
+        .scale {
+            transform: scale(1.5, 0.5);
+        }
+        
+        .notscale {
+            width: 150px;
+            height: 50px;
+        }
+        
+        .scalex {
+            transform: scaleX(2)
+        }
+        
+        .scaley {
+            transform: scaleY(2)
+        }
+        
+        .skew {
+            transform: skew(30deg, 10deg)
+        }
+        
+        .skewx {
+            transform: skewX(50deg)
+        }
+        
+        .skewy {
+            transform: skewY(40deg)
+        }
+        
+        .origin {
+            transform: rotate(-45deg);
+            transform-origin: top right;
+        }
+    </style>
+</head>
+
+<body>
+
+    <p>正方形长宽各100px</p>
+    <div class="continue">
+        <div class="rotate trform">
+            旋转30°
+        </div>
+        <div class="translate trform">
+            横向移动100px 纵向移动20px
+        </div>
+        <div class="translatex trform">
+            横向移动200px
+        </div>
+        <div class="translatey trform">
+            纵向移动50px
+        </div>
+    </div>
+    <div class="continue">
+        <div class="scale trform">
+            横向缩放1.5 纵向缩放0.5
+        </div>
+        <div class="notscale trform">
+            未缩放的效果, 正常的大小
+        </div>
+        <div class="scalex trform">
+            横向缩放2（横向放大2倍）
+        </div>
+        <div class="scaley trform">
+            纵向放大2倍
+        </div>
+    </div>
+    <div class="continue">
+        <div class="skew trform">
+            横向扭曲30度 纵向扭曲10度
+        </div>
+        <div class="skewx trform">
+            横向扭曲50度
+        </div>
+        <div class="skewy trform">
+            纵向扭曲40度
+        </div>
+    </div>
+    <div class="continue">
+        <div class="origin trform">
+            <p>以右上角为基点旋转45度</p>
+        </div>
+    </div>
+</body>
+
+</html>
