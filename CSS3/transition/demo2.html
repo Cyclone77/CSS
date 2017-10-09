@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>menu</title>
+    <style>
+        a {
+            text-decoration: none;
+        }
+        
+        .btngroup {
+            display: inline-block;
+        }
+        
+        .btngroup .dropdown-menu {
+            display: none;
+            margin: 0;
+            padding: 5px;
+            box-shadow: 0 6px 12px rgba(0, 0, 0, .175);
+            transition: display 1s;
+        }
+        
+        .btngroup:hover .dropdown-menu {
+            display: block;
+        }
+        
+        .btngroup .dropdown-menu li {
+            list-style: none;
+        }
+        
+        .btngroup .dropdown-menu li a {
+            display: block;
+            padding: 3px 20px;
+            clear: both;
+            font-weight: 400;
+            line-height: 1.42857143;
+            color: #333;
+            white-space: nowrap;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="btngroup">
+        <button class="btn dropdown-toggle">dropdown</button>
+        <ul class="dropdown-menu">
+            <li>
+                <a href="javascript:;">菜单1</a>
+            </li>
+            <li>
+                <a href="javascript:;">菜单2</a>
+            </li>
+            <li>
+                <a href="javascript:;">菜单3</a>
+            </li>
+            <li>
+                <a href="javascript:;">菜单4</a>
+            </li>
+            <li>
+                <a href="javascript:;">菜单5</a>
+            </li>
+        </ul>
+    </div>
+</body>
+
+</html>
