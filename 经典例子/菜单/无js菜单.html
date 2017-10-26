@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <style type="text/css">
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+        
+        html,
+        body {
+            width: 100%;
+            height: 100%;
+        }
+        
+        header {
+            width: 100%;
+            height: 50px;
+            background: #1A2940;
+            color: #fff;
+        }
+        
+        .box {
+            width: 180px;
+            height: 100%;
+            background-color: #6a8bbc;
+        }
+        
+        menu {
+            width: 180px;
+            /*height: calc(height-50);*/
+            /*max-height: 100%;*/
+            overflow: auto;
+            background-color: #6a8bbc;
+        }
+        
+        menu .menu-item {
+            position: relative;
+        }
+        
+        menu .menu-item>input {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 46px;
+            opacity: 0;
+            cursor: pointer;
+        }
+        
+        menu .menu-parent:hover {
+            background: #1A2940;
+        }
+        
+        menu .menu-parent:active {
+            color: #fff;
+            background-color: #5375f1;
+        }
+        
+        menu .menu-parent:visited {
+            color: #fff;
+            background-color: #5375f1;
+        }
+        
+        menu span {
+            display: block;
+            padding: 5px 10px;
+            font-size: 16px;
+            line-height: 36px;
+            cursor: pointer;
+        }
+        
+        menu span:hover {
+            background: #1A2940;
+            color: #fff;
+        }
+        
+        menu span:active {
+            color: #fff;
+            background-color: #5375f1;
+        }
+        
+        menu span.menu-child {
+            font-size: 14px;
+            text-indent: 20px;
+        }
+        
+        menu .menu-item-list {
+            max-height: 0;
+            overflow: hidden;
+            transition: all .3s ease;
+        }
+        
+        menu :checked+.menu-item-list {
+            max-height: 500px;
+        }
+        
+        .tdcolor {
+            color: red
+        }
+    </style>
+    <script type="text/javascript">
+        var menu = document.getElementsByTagName('menu-parent');
+        window.onload = function() {
+            for (var i = 0; i < menu.length; i++) {
+                menu[i].onclick = function() {
+                    menuOnclick(this);
+                }
+            }
+        }
+
+        function menuOnclick(obj) {
+            for (var j = 0; j < menu.length; j++) {
+                if (menu[j] == obj) {
+                    menu[j].className = 'tdcolor';
+                }
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <header>
+        <img src="/" />aliyun
+    </header>
+    <div class="box">
+        <menu>
+            <div class="menu-item">
+                <span class="menu-parent active">概览</span>
+            </div>
+            <div class="menu-item">
+                <span class="menu-parent">软件服务</span>
+            </div>
+            <div class="menu-item">
+                <span class="menu-parent">菜单1</span>
+                <input type="checkbox" name="" value="">
+                <div class="menu-item-list">
+                    <span class="menu-child">子菜单1</span>
+                    <span class="menu-child">子菜单2</span>
+                    <span class="menu-child">子菜单3</span>
+                    <span class="menu-child">子菜单4</span>
+                </div>
+            </div>
+            <div class="menu-item">
+                <span class="menu-parent">菜单2</span>
+                <input type="checkbox" name="" value="">
+                <div class="menu-item-list">
+                    <span class="menu-child">子菜单1</span>
+                    <span class="menu-child">子菜单2</span>
+                    <span class="menu-child">子菜单3</span>
+                    <span class="menu-child">子菜单4</span>
+                </div>
+            </div>
+            <div class="menu-item">
+                <span class="menu-parent">菜单3</span>
+                <input type="checkbox" name="" value="">
+                <div class="menu-item-list">
+                    <span class="menu-child">子菜单1</span>
+                    <span class="menu-child">子菜单2</span>
+                    <span class="menu-child">子菜单3</span>
+                    <span class="menu-child">子菜单4</span>
+                </div>
+            </div>
+        </menu>
+    </div>
+</body>
+
+</html>
