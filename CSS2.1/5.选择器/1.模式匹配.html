@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>模式匹配</title>
+</head>
+
+<body>
+    <p>选择器中，文档语言元素名的大小写敏感性取决于文档语言，例如，HTML中，元素名是大小写不敏感的，但在XML中是大小写敏感的</p>
+    <p>下表总结了CSS 2.1选择器语法：</p>
+    <table border="1">
+        <tbody>
+            <tr>
+                <th>Pattern</th>
+                <th>Meaning</th>
+                <th>Described in section</th>
+            </tr>
+            <tr>
+                <td>*</td>
+                <td>匹配所有元素</td>
+                <td><a href="#universal-selector">通配选择器</a></td>
+            </tr>
+            <tr>
+                <td>E</td>
+                <td>匹配所有E元素（即，E类型的元素）</td>
+                <td><a href="#type-selectors">类型选择器（标签选择器）</a></td>
+            </tr>
+            <tr>
+                <td>E F</td>
+                <td>匹配所有E元素后代中的F元素</td>
+                <td><a href="#descendant-selectors">后代选择器</a></td>
+            </tr>
+            <tr>
+                <td>E &gt; F</td>
+                <td>匹配所有E元素子级中的F元素</td>
+                <td><a href="#child-selectors">子选择器</a></td>
+            </tr>
+            <tr>
+                <td>E:first-child</td>
+                <td>匹配父元素的第一个子级为E的E元素（Matches element E when E is the first child of its parent）
+                </td>
+                <td><a href="#first-child">:first-child伪类</a></td>
+            </tr>
+
+            <tr>
+                <td>E:link<br>E:visited </td>
+                <td>匹配未访问过的(:link)或者已被访问过的(:visited)超链接源锚点（anchor）的E元素
+                </td>
+                <td><a href="#link-pseudo-classes">link伪类</a></td>
+            </tr>
+            <tr>
+                <td>E:active<br>E:hover<br>E:focus </td>
+                <td>匹配处于某些用户动作期间的E元素
+                </td>
+                <td><a href="#dynamic-pseudo-classes">动态伪类</a>
+                </td>
+            </tr>
+            <tr>
+                <td>E:lang(c) </td>
+                <td>匹配语言为（人类）语言c的E元素（文档语言会指定怎样确定语言）
+                </td>
+                <td><a href="#lang">:lang()伪类</a>
+                </td>
+            </tr>
+            <tr>
+                <td>E + F</td>
+                <td>匹配所有前面紧跟着一个E元素兄弟的F元素</td>
+                <td><a href="#adjacent-selectors">相邻选择器</a>
+                </td>
+            </tr>
+            <tr>
+                <td>E[foo]</td>
+                <td>匹配设置了"foo"属性（无论值是什么）的E元素
+                </td>
+                <td><a href="#attribute-selectors">属性选择器</a>
+                </td>
+            </tr>
+            <tr>
+                <td>E[foo="warning"]</td>
+                <td>匹配所有"foo"属性值恰好是"wraning"的E元素
+                </td>
+                <td><a href="#attribute-selectors">属性选择器</a>
+                </td>
+            </tr>
+            <tr>
+                <td>E[foo~="warning"]</td>
+                <td>匹配所有"foo"属性值为一列空格分隔的值，且其中之一恰好是"warning"的E元素
+                </td>
+                <td><a href="#attribute-selectors">属性选择器</a>
+                </td>
+            </tr>
+            <tr>
+                <td>E[lang|="en"]</td>
+                <td>匹配所有"lang"属性值为一列以"en"开头（从左向右）用连字符分隔的值的E元素
+                </td>
+                <td><a href="#attribute-selectors">属性选择器</a>
+                </td>
+            </tr>
+            <tr>
+                <td>DIV.warning</td>
+                <td><em>语言特定的</em>（HTML中，与DIV[class~="warning"]相同
+                </td>
+                <td><a href="#class-html">类选择器</a></td>
+            </tr>
+            <tr>
+                <td>E#myid</td>
+                <td>匹配所有ID为"myid"的E元素</td>
+                <td><a href="#id-selectors">ID选择器</a></td>
+            </tr>
+        </tbody>
+    </table>
+</body>
+
+</html>

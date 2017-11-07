@@ -103,24 +103,6 @@
             color: red
         }
     </style>
-    <script type="text/javascript">
-        var menu = document.getElementsByTagName('menu-parent');
-        window.onload = function() {
-            for (var i = 0; i < menu.length; i++) {
-                menu[i].onclick = function() {
-                    menuOnclick(this);
-                }
-            }
-        }
-
-        function menuOnclick(obj) {
-            for (var j = 0; j < menu.length; j++) {
-                if (menu[j] == obj) {
-                    menu[j].className = 'tdcolor';
-                }
-            }
-        }
-    </script>
 </head>
 
 <body>

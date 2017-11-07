@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>属性选择器</title>
+    <style>
+        body {
+            background-color: #e0e0e0;
+        }
+        
+        a {
+            margin: 5px;
+        }
+        
+        a[att] {
+            color: wheat;
+        }
+        
+        a[att='val'] {
+            color: yellow;
+        }
+        
+        a[att~='ab'] {
+            color: black;
+        }
+        
+        a[att|='cy'] {
+            color: brown;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>1 匹配属性与属性值</h1>
+    <p>属性选择器可以通过4种方式匹配：</p>
+
+    <h3>a[att]</h3>
+    <a href="#" att="1">链接att=1</a>
+
+    <h3>a[att='val']</h3>
+    <a href="#" att="val">链接att=val</a>
+
+    <h3>a[att~='ab']</h3>
+    <a href="#" att="a b">链接att=val</a>
+    <a href="#" att="ab">链接att=val</a>
+
+    <h3>a[att|='cy']</h3>
+    <a href="#" att="cy-">链接att=val</a>
+    <a href="#" att="cy">链接att=val</a>
+    <a href="#" att="cy-b">链接att=val</a>
+    <a href="#" att="c-cy-b">链接att=val</a>
+</body>
+
+</html>
