@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>伪元素与伪类</title>
+    <style>
+        .list li:first-child {
+            background-color: lime;
+            text-indent: 1rem;
+        }
+        
+        .list li:first-child em {
+            color: blue;
+        }
+        
+        a:link {
+            color: black;
+        }
+        
+        a:visited em {
+            color: brown;
+        }
+    </style>
+
+</head>
+
+<body>
+    <ul class="list">
+        <li> <b>测试</b> This span is limed! <em>测试</em></li>
+        <li>This span is not. :(</li>
+    </ul>
+
+    <a href="#">测试 <em>链接</em></a>
+    <a href="#2"><em>测试</em> 链接</a>
+</body>
+
+</html>
