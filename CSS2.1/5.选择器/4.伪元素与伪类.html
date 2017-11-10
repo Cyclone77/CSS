@@ -23,11 +23,53 @@
         a:visited em {
             color: brown;
         }
+        
+        a:active {
+            color: lime
+        }
+        
+        a:focus {
+            background: yellow
+        }
+        
+        a:focus:hover {
+            background: white
+        }
+        
+        .box {
+            margin: 10px;
+            padding: 50px;
+            background-color: cyan;
+            display: inline-block;
+            /* transition: all 0.5s ease-in; */
+        }
+        
+        .box:hover {
+            background-color: blueviolet;
+        }
+        
+        .box:active {
+            background-color: tomato;
+        }
+        
+         :lang(en)>Q {
+            /* quotes: '\201C' '\201D' '\2018' '\2019'; */
+            quotes: '《' '》';
+        }
+        
+         :lang(fr)>Q {
+            quotes: '« ' ' »';
+        }
+        
+         :lang(de)>Q {
+            quotes: '»' '«' '\2039' '\203A';
+        }
     </style>
 
 </head>
 
 <body>
+    <h1>:link伪类</h1>
     <ul class="list">
         <li> <b>测试</b> This span is limed! <em>测试</em></li>
         <li>This span is not. :(</li>
@@ -35,6 +77,20 @@
 
     <a href="#">测试 <em>链接</em></a>
     <a href="#2"><em>测试</em> 链接</a>
+
+    <h1>动态伪类 :hover，:active与:focus</h1>
+    <p>:hover 鼠标划过</p>
+    <p>:active 激活元素 按下鼠标未送开</p>
+    <p>:focus 获得焦点</p>
+    <div class="box"></div>
+
+    <h1>语言伪类 :lang</h1>
+    <div lang="fr"><q>This French quote has a <q>nested</q> quote.</q>
+    </div>
+    <div lang="de"><q>This German quote has a <q>nested</q> quote.</q>
+    </div>
+    <div lang="en"><q>This English quote has a <q>nested</q> quote.</q>
+    </div>
 </body>
 
 </html>
