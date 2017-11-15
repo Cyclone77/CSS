@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>可拖动的列</title>
+    <style>
+        .resizeBox {
+            width: 500px;
+        }
+        
+        table {
+            width: 100%;
+            border: 1px solid #000;
+            border-collapse: collapse;
+        }
+        
+        th {
+            background: #ccc;
+        }
+        
+        th,
+        td {
+            border: 1px solid #000;
+        }
+        
+        thead th.drag {
+            cursor: col-resize;
+        }
+    </style>
+</head>
+
+<body>
+
+</body>
+<div class="resizeBox">
+    <table id="resizeTable">
+        <thead>
+            <tr>
+                <th>标题1</th>
+                <th>标题2</th>
+                <th>标题3</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>第1行</td>
+                <td>第1行</td>
+                <td>第1行</td>
+            </tr>
+            <tr>
+                <td>第2行</td>
+                <td>第2行</td>
+                <td>第1行</td>
+            </tr>
+            <tr>
+                <td>第3行</td>
+                <td>第3行</td>
+                <td>第1行</td>
+            </tr>
+        </tbody>
+    </table>
+    <script>
+        'use strict';
+
+        class DragCol {
+            constructor(selector) {
+                this.celling = {};
+                this.tableEl = typeof(selector) === 'object' ? selector : document.querySelector(selector);
+                this.headerEl = this.tableEl.rows[0];
+                this.regevent();
+            }
+
+            //注册事件
+            regevent() {
+                for (let i = 0, len = this.headerEl.cells.length; i < len; i++) {
+                    //鼠标按下事件
+                    let drag = this.headerEl.cells[i]
+                    drag.addEventListener('mousedown', e => {
+                        let dragscope = drag.offsetWidth - e.offsetX < 6;
+                        if (dragscope) {
+                            console.log('容器位置%s', drag.offsetWidth);
+                            console.log('鼠标位置%s', e.offsetX);
+                            this.celling = Object.assign(this.celling, {
+                                mouserdown: dragscope,
+                                oldx: e.x,
+                                oldw: drag.offsetWidth
+                            })
+                        }
+                    }, false);
+
+                    //注册鼠标按下移动事件
+                    drag.addEventListener('mousemove', e => {
+                        let dragscope = drag.offsetWidth - e.offsetX < 6;
+
+                        //drag.classList.add('drag');
+                        dragscope ? drag.classList.add('drag') : drag.classList.remove('drag');
+                        if (dragscope) {
+                            console.log('容器位置%s', drag.offsetWidth);
+                            console.log('鼠标位置%s', e.offsetX);
+                        }
+                    }, false);
+                }
+
+                //注册鼠标松开事件
+                this.tableEl.addEventListener('mouseup', (e) => {
+
+                })
+
+            }
+        }
+
+        new DragCol("#resizeTable");
+    </script>
+</div>
+
+</html>
